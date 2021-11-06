@@ -1,30 +1,51 @@
-body{
-    background: #fafafa;
+html{
+    font-family: Source Sans Pro;
+    color: #fff;
+    background: red;
 }
-h1{
-    font-size: 35px;
-    text-align: center;
-    &:hover{
-        color: red;
-        background: yellow;
-    }
+$bgColor: #36348E;
+$fitchColor:  #FFC53A;
+
+// 
+.logo{
+    width: 134px;
+    height: 132px;
+    padding: 23px;
+    background: $bgColor;
 }
-.wrapper {
+.container{
     width: 100%;
     height: auto;
-    padding: 20px;
-    background: rgb(230, 248, 64);
+    display: flex;
+    flex-direction: row;
 }
-.circle {
-    width: 100px;
-    height: 100px;
-    background: red;
-    border-radius: 50%;
-    border: 1px solid #000;
-    transition: 2s;
-    &:hover{
-        border-radius: 20%;
-        transition: 2s;
-        transform: rotate(190deg);
+.box {
+    width: 1200px;
+    // 
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.headerBox{
+    background:#fff;
+    height: 90px;
+}
+.headerNav{
+    display: flex;
+    align-items: center;
+    color: #252525;
+    ul{
+        width: 100%;
+        display: flex;
+        li{
+            padding: 32px 15px;
+            transition: 1s;
+            &:hover{
+                background: $fitchColor;
+            }
+        }
+
     }
 }
+
