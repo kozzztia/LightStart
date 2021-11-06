@@ -9,3 +9,22 @@ h1{
         background: yellow;
     }
 }
+.wrapper {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background: rgb(70, 248, 64);
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+    border: 1px solid #000;
+    transition: 2s;
+    &:hover{
+        border-radius: 20%;
+        transition: 2s;
+        transform: rotate(90deg);
+    }
+}
