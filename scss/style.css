@@ -1,0 +1,4 @@
+body { background: #fafafa; }
+
+h1 { font-size: 35px; text-align: center; }
+h1:hover { color: red; background: yellow; }
