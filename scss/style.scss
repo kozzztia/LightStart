@@ -1,7 +1,7 @@
 html{
     font-family: Source Sans Pro;
     font-size: 18px;
-    color: #fff;
+
     background: red;
 }
 $bgColor: #36348E;
@@ -33,6 +33,7 @@ width: 1200px;
 }
 // 
 .headerContainer{
+    color: #fff;
     background: #fff;
     height: 90px;
     
@@ -74,6 +75,17 @@ width: 1200px;
 }
 .ENLang {
 }
+// 
+.aboutStudyContainer{
+    height: 900px;
+    background: url(../images/backgroung/aboutStudy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.aboutStudyBox{
+
+}
 
 
 
@@ -114,14 +126,4 @@ width: 1200px;
             }
         }
     }
-}
-.aboutStudyContainer{
-    height: 900px;
-    background: url(../images/backgroung/aboutStudy.jpg) bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-.aboutStudyBox{
-
 }
