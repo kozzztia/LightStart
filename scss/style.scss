@@ -2,7 +2,7 @@ html{
     font-family: Source Sans Pro;
     font-size: 18px;
 
-    background: red;
+    color: #252525;
 }
 $bgColor: #36348E;
 $fitchColor:  #FFC53A;
@@ -14,6 +14,8 @@ $fitchColor:  #FFC53A;
     padding: 23px;
     background: $bgColor;
     transition: 1s;
+    position: relative;
+    z-index: 1;
     &:hover{
         background: $fitchColor;
     }
@@ -30,6 +32,8 @@ width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+}
+.form {
 }
 // 
 .headerContainer{
@@ -78,14 +82,90 @@ width: 1200px;
 // 
 .aboutStudyContainer{
     height: 900px;
-    background: url(../images/backgroung/aboutStudy.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
+    background: $bgColor;
+    .aboutStudy {
+ 
+        height: 100%;
+    }
+    .leftBG {
+        width: 70vw;
+        background:url(../images/backgroung/aboutStudy.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .rightBG {
+        width: 30vw;
+        background:url(../images/backgroung/STUDY.png) left 100px center no-repeat;
+    }
+    .aboutStudyContent{
+        position: absolute;
+        height: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        border: solid 1px #ccc;
+    }
 }
-.aboutStudyBox{
-
+// 
+.aboutStudyContent{
+    flex-direction: row;
+    padding: 160px 0;
 }
+.aboutStudyText {
+    text-align: left;
+    h1{
+        font-weight: 900;
+        font-size: 105px;
+        line-height: 110%;
+        text-transform: capitalize;
+    }p{
+        font-size: 20px;
+        line-height: 150%;
+        margin-bottom: 70px;
+    }
+    .studyText__circles {
+        display: flex;
+        height: auto;
+        align-items: center;
+        .studyCircle {
+            width: 87px;
+            height: 87px;
+            border-radius: 50%;
+            border: solid 1px #fff;
+            position: relative;
+            background-position: cover;
+            &:nth-child(1){
+               background: url(../images/about/Ellipse1.jpg); 
+            }
+            &:nth-child(2){
+               background: url(../images/about/Ellipse2.jpg); 
+            }
+            &:nth-child(3){
+               background: url(../images/about/Ellipse3.jpg); 
+            }
+            &:nth-child(4){
+                p{
+                    margin: 27px ;
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 150%;
+                    color: #fff;
+                }
+               background: $bgColor; 
+            }
+        }
+        p{
+            font-size: 18px;
+            line-height: 130%;
+        }
+    }
+}
+.aboutStudyForm {
+}
+
+
 
 
 

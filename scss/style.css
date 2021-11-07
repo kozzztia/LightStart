@@ -1,6 +1,6 @@
-html { font-family: Source Sans Pro; font-size: 18px; background: red; }
+html { font-family: Source Sans Pro; font-size: 18px; color: #252525; }
 
-.logo { width: 134px; height: 132px; padding: 23px; background: #36348E; transition: 1s; }
+.logo { width: 134px; height: 132px; padding: 23px; background: #36348E; transition: 1s; position: relative; z-index: 1; }
 .logo:hover { background: #FFC53A; }
 
 .container { width: 100%; height: auto; display: flex; }
@@ -18,7 +18,25 @@ html { font-family: Source Sans Pro; font-size: 18px; background: red; }
 .headerNav .mobile { margin-left: 42px; font-weight: 600; }
 .headerNav select { font-weight: normal; font-size: 16px; line-height: 150%; }
 
-.aboutStudyContainer { height: 900px; background: url(../images/backgroung/aboutStudy.jpg); background-size: cover; background-repeat: no-repeat; }
+.aboutStudyContainer { height: 900px; background: #36348E; }
+.aboutStudyContainer .aboutStudy { height: 100%; }
+.aboutStudyContainer .leftBG { width: 70vw; background: url(../images/backgroung/aboutStudy.jpg); background-repeat: no-repeat; background-size: cover; }
+.aboutStudyContainer .rightBG { width: 30vw; background: url(../images/backgroung/STUDY.png) left 100px center no-repeat; }
+.aboutStudyContainer .aboutStudyContent { position: absolute; height: 900px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center; border: solid 1px #ccc; }
+
+.aboutStudyContent { flex-direction: row; padding: 160px 0; }
+
+.aboutStudyText { text-align: left; }
+.aboutStudyText h1 { font-weight: 900; font-size: 105px; line-height: 110%; text-transform: capitalize; }
+.aboutStudyText p { font-size: 20px; line-height: 150%; margin-bottom: 70px; }
+.aboutStudyText .studyText__circles { display: flex; height: auto; align-items: center; }
+.aboutStudyText .studyText__circles .studyCircle { width: 87px; height: 87px; border-radius: 50%; border: solid 1px #fff; position: relative; background-position: cover; }
+.aboutStudyText .studyText__circles .studyCircle:nth-child(1) { background: url(../images/about/Ellipse1.jpg); }
+.aboutStudyText .studyText__circles .studyCircle:nth-child(2) { background: url(../images/about/Ellipse2.jpg); }
+.aboutStudyText .studyText__circles .studyCircle:nth-child(3) { background: url(../images/about/Ellipse3.jpg); }
+.aboutStudyText .studyText__circles .studyCircle:nth-child(4) { background: #36348E; }
+.aboutStudyText .studyText__circles .studyCircle:nth-child(4) p { margin: 27px; font-weight: bold; font-size: 20px; line-height: 150%; color: #fff; }
+.aboutStudyText .studyText__circles p { font-size: 18px; line-height: 130%; }
 
 @media (max-width: 920px) { .headerContainer { height: 350px; }
   .headerBox { justify-content: space-evenly; align-items: center; }
