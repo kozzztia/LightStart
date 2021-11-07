@@ -1,5 +1,6 @@
 html{
     font-family: Source Sans Pro;
+    font-size: 18px;
     color: #fff;
     background: red;
 }
@@ -12,40 +13,115 @@ $fitchColor:  #FFC53A;
     height: 132px;
     padding: 23px;
     background: $bgColor;
+    transition: 1s;
+    &:hover{
+        background: $fitchColor;
+    }
 }
 .container{
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
 }
 .box {
-    width: 1200px;
+width: 1200px;
     // 
     height: auto;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
-.headerBox{
-    background:#fff;
+// 
+.headerContainer{
+    background: #fff;
     height: 90px;
+    
 }
-.headerNav{
-    display: flex;
-    align-items: center;
-    color: #252525;
+.headerBox {
     ul{
-        width: 100%;
         display: flex;
         li{
-            padding: 32px 15px;
-            transition: 1s;
-            &:hover{
-                background: $fitchColor;
+            a{
+                padding: 35px 15px;
+                transition: 1s;
+                color: #252525;
+                &:hover:not(last-child){
+                    background: $fitchColor;
+                }
+                .mobile{
+                    font-weight: 600;
+                }
             }
         }
+    }
 
+
+}
+.headerNav {
+    display: flex;
+    align-items: center;
+    .mobile {
+        margin-left: 42px;
+        font-weight: 600; 
+    }
+    select{
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
     }
 }
+.UALang {
+}
+.ENLang {
+}
 
+
+
+
+
+
+
+
+
+
+
+// @media
+@media (max-width: 920px ) {
+    .headerContainer{
+        height: 350px;
+    }
+    .headerBox{
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .headerNav{
+        height: 350px;
+        align-items: stretch;
+        ul{
+            flex-direction: column;
+            justify-content: space-evenly;
+            li{
+                width: 250px;
+                a,select{
+                    margin: 0;
+                    padding: 15px;
+
+
+                }    
+                .mobile{
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+.aboutStudyContainer{
+    height: 900px;
+    background: url(../images/backgroung/aboutStudy.jpg) bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.aboutStudyBox{
+
+}
